@@ -42,10 +42,10 @@ namespace DDLCBypassAct2
                 string ddlcsteam = @"C:\Program Files (x86)\Steam\steamapps\common\Doki Doki Literature Club";
                 DirectoryInfo ddlcxzx = new DirectoryInfo(ddlcsteam + @"\game");
                 FileInfo[] fileInfos = ddlcxzx.GetFiles("firstrun");
-                foreach (FileInfo DDLCsteamdeletesaves in fileInfos)
+                foreach (FileInfo DDLCsteamdeletefirstrun in fileInfos)
                 {
-                    DDLCsteamdeletesaves.Attributes = FileAttributes.Normal;
-                    DDLCsteamdeletesaves.Delete();
+                    DDLCsteamdeletefirstrun.Attributes = FileAttributes.Normal;
+                    DDLCsteamdeletefirstrun.Delete();
                 }
                 MessageBox.Show("Done");
             }
